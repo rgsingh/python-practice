@@ -1,4 +1,5 @@
-"""Write a Python program to check the nth-1 string is a proper substring of nth string in a given list of strings."""
+"""Write a Python program to check the string at position is a proper substring
+of any string in a given list of strings. Return a both True/False and the matching occurrences"""
 
 
 def valid_string_in_which(position, input_arr):
@@ -7,9 +8,9 @@ def valid_string_in_which(position, input_arr):
     if position >= len(input_arr):
         raise Exception('zero-based position must be within bounds of input_arr')
 
-    while len(input_arr) - 1 > i >= 0:
-        if input_arr[position] in input_arr[i+1] and (position != i+1):
-            matched_against.append(input_arr[i+1])
+    while len(input_arr) > i >= 0:
+        if input_arr[position] in input_arr[i] and (position != i):
+            matched_against.append(input_arr[i])
         i += 1
 
     return len(matched_against) > 0, matched_against
