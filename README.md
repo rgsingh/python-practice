@@ -6,7 +6,8 @@ and frameworks
 
 Active a Python 3 venv
 
-    source <path-to-your-venv-for-python3>/bin/activate
+    python3.10 -m venv practice_venv
+    source ./practice_venv/bin/activate
 
 Install requirements
 
