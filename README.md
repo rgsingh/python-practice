@@ -15,7 +15,12 @@ Install requirements
 
 Run tests
 
-    python -m pytest tests -v
+    pytest tests -v
 
 
+## LeetCode
+The LeetCode problems are organized by number and general description.
+Where a number is prefixed, there may be a variation using an analogy to mask the problem to simiulate a scenario that
+hides the techique or algorithm being used.
 
+https://leetcode.com/problems/
