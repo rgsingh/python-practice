@@ -1,5 +1,5 @@
 import pytest
-from src import prob5
+from src.general import prob5
 
 
 def test_position_out_of_bounds_raises_exception():

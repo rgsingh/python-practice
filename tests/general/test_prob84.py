@@ -1,5 +1,4 @@
-import pytest
-from src import prob84
+from src.general import prob84
 
 
 def test_unhappy_string():

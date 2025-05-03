@@ -1,5 +1,5 @@
 """
-Write a Python program that accept an integer test whether an integer greater than 4^4 and which is integer mod 34
+Write a Python program that accept an integer test whether an integer is greater than 4^4 and if integer mod 34
 is 4
 """
 
