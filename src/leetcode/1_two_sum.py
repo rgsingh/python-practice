@@ -5,17 +5,16 @@ You may assume that each input would have exactly one solution, and you may not 
 You can return the answer in any order."""
 
 
-def two_sum2(nums: list[int], target):
+def two_sum2(nums: list[int], target: int) -> dict:
     seen = {}
-    match_tuple = {}
+    matched_tuple = {}
     for idx, num in enumerate(nums):
         diff = target - num
         if diff in seen:
-            match_tuple = (nums.index(diff), nums.index(num))
+            matched_tuple = (nums.index(diff), nums.index(num))
             break
-        else:
-            seen[num] = True
-    return match_tuple
+        seen[num] = True
+    return matched_tuple
 
 
 def two_sum(nums, target):

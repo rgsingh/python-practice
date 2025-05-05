@@ -25,3 +25,11 @@ if __name__ == '__main__':
         "have you seen my cat?",
         "man, i can't stand all of these people."
     ]))
+
+    print(longest_convo_sequence([
+        "mommy?",
+        "mommy?",
+        "bruh, sup?",
+        "hey, my man!",
+        "bruh, sup?",
+    ]))

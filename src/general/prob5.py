@@ -5,15 +5,17 @@ of any string in a given list of strings. Return a both True/False and the match
 def valid_string_in_which(position, input_arr):
     matched_against = []
     i = 0
-    if position >= len(input_arr):
-        raise Exception('zero-based position must be within bounds of input_arr')
+    if not -len(input_arr) <= position < len(input_arr):
+        # raise Exception('zero-based position must be within bounds of input_arr')
+        return "UNRESOLVABLE_SUBSTR", False, "UNRESOLVABLE_TARGET"
 
-    while len(input_arr) > i >= 0:
-        if input_arr[position] in input_arr[i] and (position != i):
-            matched_against.append(input_arr[i])
-        i += 1
+    target_str = input_arr[position]
 
-    return len(matched_against) > 0, matched_against
+    for idx, s in enumerate(input_arr):
+        if idx != position and target_str in s:
+            matched_against.append(s)
+
+    return input_arr[position], len(matched_against) > 0, matched_against
 
 
 if __name__ == '__main__':
