@@ -38,7 +38,7 @@ def coerce_type(payload: dict, schema: dict, path="root") -> dict:
 
 
 if __name__ == '__main__':
-    payload = {
+    input_payload = {
         "applicationId": "06bd6ecf-8b74-450e-bd5d-3a0439d4a80e",
         "isActive": "false",
         "metadata": {
@@ -47,7 +47,7 @@ if __name__ == '__main__':
         "event_time": "2025-05-09T20:37:42Z"
     }
 
-    schema = {
+    schema_definition = {
         "applicationId": str,
         "isActive": bool,
         "metadata": {
@@ -56,4 +56,4 @@ if __name__ == '__main__':
         "event_time": datetime
     }
 
-    print(coerce_type(payload, schema))
+    print(coerce_type(input_payload, schema_definition))
