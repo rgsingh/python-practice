@@ -4,11 +4,10 @@ You may assume that each input would have exactly one solution, and you may not 
 
 You can return the answer in any order."""
 
-
 def two_sum2(nums: list[int], target: int) -> dict:
     seen = {}
     matched_tuple = {}
-    for idx, num in enumerate(nums):
+    for num in nums:
         diff = target - num
         if diff in seen:
             matched_tuple = (nums.index(diff), nums.index(num))
@@ -27,10 +26,23 @@ def two_sum(nums, target):
         seen[num] = True
 
 
+def two_sum3(nums, target):
+    seen = {}
+    match = {}
+    for num in nums:
+        diff = target - num
+        if diff in seen:
+            match = (nums.index(diff), nums.index(num))
+        seen[num] = True
+
+    return match
+
+
+
 if __name__ == '__main__':
     input_nums = [2, 7, 11, 15]
     input_target = 9
-    match = two_sum2(input_nums, input_target)
+    match = two_sum3(input_nums, input_target)
     print(match)
 
     input_nums = [15, 12, 8, 2]

@@ -1,20 +1,3 @@
-# incomplete and broken
-def palindromes(raw_input: str) -> list[str]:
-    matches = []
-    depth = 0
-
-    for right_idx, curr_char in enumerate(raw_input):
-        look_left = raw_input[right_idx - 1] if right_idx > 0 else None
-        look_right = raw_input[right_idx + 1] if right_idx < len(raw_input) - 1 else None
-        if look_left == look_right:
-            depth += 1
-            match = raw_input[right_idx - 1:right_idx + 1]
-            matches.append(match)
-            print(depth)
-
-    return matches
-
-
 def longest_palindrome(s: str) -> str:
     result = ""
 
